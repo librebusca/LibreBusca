@@ -1,5 +1,5 @@
-# Ignorar variaveis de ambiente
+# Ignore environment variables
 .env
 
-# Ignorar logs de erro
+# Ignore error logs
 .log
