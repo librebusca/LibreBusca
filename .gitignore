@@ -1,0 +1,5 @@
+# Ignorar variaveis de ambiente
+.env
+
+# Ignorar logs de erro
+.log
