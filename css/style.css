@@ -1,0 +1,400 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+/***************************************************
+                    BODY 
+***************************************************/
+@media (prefers-color-scheme: light) {
+html, body {
+	width: 100%;
+	background-color: #fff;
+
+	/* Makes the middle of the website fixed, without the footer moving up when no search results are found or there are few results */
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+}
+@media (prefers-color-scheme: dark) {
+html, body {
+	width: 100%;
+	background-color: #09090b;
+
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+}
+
+
+/***************************************************
+                    NAVBAR 
+***************************************************/
+/* Links amd texts */
+li, a{
+	font-size: 13px; /* Font size of links */
+	color: #fff; /* Text and link color */
+	text-decoration: none; /* Remove the underscore from links */
+	list-style-type: none; /* Remove the dots from the side of the links */
+}
+
+/***************************************************
+                     HEADER 
+***************************************************/
+@media (prefers-color-scheme: light) {
+	header {
+	display: flex;
+	justify-content: space-between; /* Separates links from each other */
+	align-items: center; /* Centers the text in the middle of the bar */
+	padding: 1px 15px; /* Height and width of the navbar */
+	background-color: #ffffff; /* Color of the navbar */
+	position: relative;
+	transition: .5s;	
+	}
+}
+@media (prefers-color-scheme: dark) {
+	header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1px 15px;
+	background-color: #121212;
+	position: relative;
+	box-shadow: rgb(0 0 0 / 15%) 0px 13px 30px -12px; /* Shadow under the bar */
+	transition: .5s;
+	}
+}
+
+/* Navbar */
+nav {
+	max-width: 1120px; /* Sets the maximum width of the bar */
+	margin-left: auto; /* Leave the links on the right side of the screen */
+	padding: 16px; /* Prevents text/links from sticking to the corners, giving them some spacing */
+}
+
+.nav-links{
+	list-style: none;
+}
+
+.nav-links li{
+	display: inline-block;
+	padding: 0px 20px;
+	transition: 0.2s; /* Makes the color change smoother when hovering over it */
+}
+
+.nav-links li a:hover{
+	color: #00acff; /* Makes it show a color when you hover over the link */
+}
+
+/***************************************************
+            	MIDDLE OF THE WEBSITE
+***************************************************/
+main {
+	flex: 1; /* Makes the main occupy all available vertical space */
+}
+@media (prefers-color-scheme: light) {
+	.container{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	background: #ffffff; /* Website background color */
+	transition: .5s;
+}
+}
+@media (prefers-color-scheme: dark) {
+	.container{
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	background-size: cover;
+	background-position: center;
+	background: #121212;
+	transition: .5s;
+}
+}
+
+/*************************************************** 
+               WEBSITE TITLE
+***************************************************/
+@media (prefers-color-scheme: light) {
+	h1 {
+	font-family: century gothic;
+	color: #000000;
+	letter-spacing: 3px;
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+.titulo {
+	color:#00acff; /* Secondary title color */
+}
+}
+@media (prefers-color-scheme: dark) {
+h1 {
+	font-family: century gothic;
+	color: #fff;
+	letter-spacing: 3px;
+	font-size: 60px;
+	margin-bottom: 30px;
+}
+.titulo {
+	color:#00acff;
+}
+}
+
+/***************************************************
+              		SEARCH BAR
+***************************************************/
+/* Search bar */
+@media (prefers-color-scheme: light) {
+	form {
+	width: 90%;
+	max-width: 600px; /* Search bar width */	
+	height: 57px; /* Search bar height */
+	background: #ffffff; /* Background color of the bar where you type your search query */
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.2); /* Shadow under the bar */
+	border: none; /* Border around the search bar */
+}
+}
+@media (prefers-color-scheme: dark) {
+	form {
+	width: 90%;
+	max-width: 600px;
+	height: 60px;
+	background: #1d1d1e;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.2); /* Shadow under the bar */
+}
+}
+
+/* Form settings, where you type what you want to search for */
+@media (prefers-color-scheme: light) {
+	form input{
+	flex: 1;
+	height: 100%;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #000000; /* Text color when typing in search */
+	font-size: 18px;
+	padding: 0 30px;
+}
+}
+@media (prefers-color-scheme: dark) {
+form input{
+	flex: 1;
+	height: 100%;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #fff;
+	font-size: 18px;
+	padding: 0 30px;
+}
+}
+
+/* Search button settings */
+@media (prefers-color-scheme: light) {
+	form button{
+	border: 0;
+	/* border-radius: 50%; */
+	width: 60px;
+	/* height: 55px; */
+	background: #00acff;
+	cursor: pointer;
+
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	height: 100%;
+	outline: 0;
+	
+	/* Round off the edges of the remaining sides.
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	*/
+}
+
+form button img {
+	width: 20px;
+}
+
+form button:hover {
+	background: #00aaffbe; /* Color of the search button when hovering over it */
+}
+
+::placeholder{
+	color: #5c5c5c; /* Text color in the search bar before typing */
+	font-size: 18px;
+}
+}
+@media (prefers-color-scheme: dark) {
+	form button{
+	border: 0;
+	/* border-radius: 50%; */
+	width: 60px;
+	/* height: 55px; */
+	background: #00acff;
+	cursor: pointer;
+
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	height: 100%;
+	outline: 0;
+}
+
+form button img {
+	width: 20px;
+}
+
+form button:hover {
+	background: #00aaffbe;
+}
+
+::placeholder{
+	color: #5c5c5c;
+	font-size: 18px;
+}
+}
+
+/***************************************************
+     		SEARCH TABLE (RESULTS PAGE)
+***************************************************/
+.items {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 12px;
+
+	padding: 14px;
+	width: 100%;
+	max-height: 421px;
+	overflow-y: auto;
+}
+.right {
+	margin-top: 15px;
+}
+/* Table with the list of sites when performing the search */
+table {
+	width: 40%;
+}
+table a {
+	color: #0125f1; /* Links color */
+	font-size: 18px; /* Link font size */
+}
+/* Title of websites in search */
+h3 {
+	margin: 10px 0px 0px 0px; /* Gives the distance between one site and another */
+}
+
+
+/***************************************************
+                    FOOTER 
+***************************************************/
+@media (prefers-color-scheme: light) {
+	.footer {
+	position: relative;
+	width: 100%;
+	background: #ffffff;
+	max-height: 66%;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+}
+@media (prefers-color-scheme: dark) {
+.footer {
+	position: relative;
+	width: 100%;
+	background: #121212;
+	max-height: 66%;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+}
+  
+.menu {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	margin: 10px 0;
+	flex-wrap: wrap;
+}
+  
+.menu-elem {
+	list-style: none;
+}
+@media (prefers-color-scheme: light) {
+.menu-icon {
+	color: rgb(2, 2, 2); /* Links color */
+	font-size: 15px;
+	display: inline-block;
+	text-decoration: none;
+	margin: 5px 10px;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+  
+.menu-icon:hover {
+ opacity: 1;
+ color: #00acff; /* Color when hovering over links */
+}
+}
+@media (prefers-color-scheme: dark) {
+.menu-icon {
+	color: white;
+	font-size: 15px;
+	display: inline-block;
+	text-decoration: none;
+	margin: 5px 10px;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+  
+.menu-icon:hover {
+ opacity: 1;
+ color: #00acff;
+}
+}
+
+/* Footer text */
+@media (prefers-color-scheme: light) {
+.footer-text {
+	color: rgb(2, 2, 2); /* Links color */
+	font-size: 15px;
+	text-decoration: none;
+	opacity: 0.5;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+.footer-text {
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+	opacity: 0.5;
+}
+}

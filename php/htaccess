@@ -1,0 +1,6 @@
+# Bloqueia o acesso direto a qualquer arquivo nesta pasta
+# Garante que o .env não seja acessado via navegador
+<FilesMatch "^\.env">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

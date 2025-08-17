@@ -1,0 +1,627 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+/***************************************************
+			TEXT AND LINKS ON THE WEBSITE
+***************************************************/
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+li, a{
+	color: #000; /* Text and link color */
+	text-decoration: none; /* Remove the underscore from links */
+	list-style-type: none; /* Remove the dots from the side of the links */
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+li, a{
+	color: #fff;
+	text-decoration: none;
+	list-style-type: none;
+}
+}
+
+/***************************************************
+                    BODY 
+***************************************************/
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+html, body {
+	width: 100%;
+	background-color: #fff;
+
+	/* Makes the middle of the site fixed, without the footer moving up when no search results are found or there are few results */
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+html, body {
+	width: 100%;
+	background-color: #09090b;
+
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+}
+
+/***************************************************
+			MAIN (MIDDLE OF THE WEBSITE) 
+***************************************************/
+main {
+	flex: 1; /* Makes the main occupy all available vertical space */
+}
+
+/* NAVBAR WITH SEARCH BAR */
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+.top-header {
+	display: flex;
+	align-items: center;
+	justify-content: center; /* Leave it in the middle of the page */
+	background-color: #fafafa;
+	padding: 10px 20px;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+.top-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #09090b;
+	padding: 10px 20px;
+}
+}
+
+/* Square where the search bar is */
+.interface {
+	width: 40%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/***************************************************
+			NAVBAR OF THE MENU WITH LINKS
+***************************************************/
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+.bottom-header {
+	display: flex;
+	align-items: center;
+	justify-content: center; /* Leave it in the middle of the page */
+	background-color: #fafafa;
+	padding: 10px 20px;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+.bottom-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1d1d1e;
+	padding: 10px 20px;
+}
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-links li {
+	display: inline-block;
+	padding: 0px 20px;
+	transition: 0.2s; /* Makes the color change smoother when hovering over it */
+}
+
+.nav-links li a:hover {
+	color: #00acff; /* Makes it show a color when you hover over the link */
+}
+
+/***************************************************
+			MAKES NAVBAR RESPONSIVE
+****************************************************/
+@media (min-width: 960px) { /* Makes everything apply to devices with a minimum screen width of 960px */
+	.hide-on-desktop { /* Hide from desktops */
+		display: none;
+	}
+}
+
+@media (max-width: 960px) { /* Applies the settings here to screens with 960px or less, i.e., mobile phones */
+	
+
+	/* Makes search bar responsive */
+	.interface {
+		width: 85%;
+		max-width: 100%;
+		margin: 0 auto;
+
+	}
+
+	/*******************************/
+	/* Light Mode */
+	@media (prefers-color-scheme: light) {
+	.nav-links {
+		opacity: 0; /* Prevents links from starting appearing on the screen */
+		top: 0;
+		transform: translateY(-140%); /* Move the navbar up */
+		/* The JavaScript will make all of the above reappear */
+
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		display: flex;
+		flex-direction: column; /* Place the links one below the other */
+		background-color: #fafafa; /* Bar color */
+		box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px;
+		padding: 32px 0; /* Gives a spacing of 32px above and below; and 0 on the sides */
+		border-top: outset; /* Creates a border separating the bars */
+		gap: 0; /* Remove spacing between links */
+	 }
+    }
+	/* Dark Mode */
+	@media (prefers-color-scheme: dark) {
+	.nav-links {
+		opacity: 0;
+		top: 0;
+		transform: translateY(-140%);
+
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		display: flex;
+		flex-direction: column;
+		background-color: #121212;
+		box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px;
+		padding: 32px 0;
+		border-top: outset;
+		gap: 0;
+	 }
+    }
+	.nav-links.show {
+		opacity: 1;
+		top: 100%;
+		transform: translateY(0);
+	}
+
+	.nav-links li {
+		text-align: center; /* Leave the links centered on the bar */
+	}
+
+	/* Light Mode */
+	@media (prefers-color-scheme: light) {
+	.nav-links li a {
+		line-height: 40px; /* Adds spacing between links */
+		width: 100%; /* Makes links take up the maximum width of the available screen */
+		display: block;
+		color: #000; /* Links color */
+	}
+    }
+	/* Dark Mode */
+	@media (prefers-color-scheme: dark) {
+	.nav-links li a {
+		line-height: 40px;
+		width: 100%;
+		display: block;
+		color: #fff;
+	}
+    }
+
+	/* Makes the hamburger menu appear */
+	.menu-hamb-button {
+		display: flex;
+		flex-direction: column;
+		gap: 6px; /* Spacing between lines of the hamburger icon */
+	}
+
+	.btn-line {
+		width: 24px;
+		height: 3px;
+		background-color: #00acff; /* Color of the three lines of the hamburger mode icon */
+	}
+	/***********************************/
+}
+
+/* In (max-width: 960px) the (nav-links) when it receives the class ‘.show’ (nav-linksShow) becomes “position: absolute”, 
+but it is inside <section class="bottom-header"> which, by default, 
+has position: static, so ‘absolute’ is positioned relative to <body> and therefore appears at the bottom.*/
+
+/* Below makes the nav-links positioned relative to .bottom-header, and it will open just below the top bar */
+@media (max-width: 960px) {
+	.bottom-header {
+		position: relative;
+	}
+}
+
+/***************************************************
+				SEARCH BAR 
+***************************************************/
+/* Entire search bar, including button */
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+	form {
+	width: 100%;	
+	height: 50px;
+	background: #ffffff; /* Background color of the bar where you type your search query */
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.2); /* Shadow under the bar */
+	border: none; /* Border around the search bar */
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+	form {
+	width: 100%;
+	height: 50px;
+	background: #1d1d1e;
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.2);
+}
+}
+
+/* Form settings, where you type what you want to search for */
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+	form input{
+	flex: 1;
+	height: 100%;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #000000; /* Text color when typing in search */
+	font-size: 18px;
+	padding: 0 30px;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+form input{
+	flex: 1;
+	height: 100%;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #fff;
+	font-size: 18px;
+	padding: 0 30px;
+}
+}
+
+/* Search button settings */
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+	form button{
+	border: 0;
+	/* border-radius: 50%; */
+	width: 60px;
+	/* height: 55px; */
+	background: #00acff;
+	cursor: pointer;
+
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	height: 100%;
+	outline: 0;
+	
+	/* Rounds the edges of the remaining sides
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	*/
+}
+
+form button img {
+	width: 20px;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+	form button{
+	border: 0;
+	/* border-radius: 50%; */
+	width: 60px;
+	/* height: 55px; */
+	background: #00acff;
+	cursor: pointer;
+
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	height: 100%;
+	outline: 0;
+}
+
+	form button img {
+	width: 20px;
+}
+}
+
+form button:hover {
+	background: #00aaffbe; /* Color of the search button when hovering over it */
+}
+
+::placeholder{
+	color: #5c5c5c; /* Text color in the search bar before typing */
+	font-size: 18px;
+}
+
+/***************************************************
+				SEARCH TABLE
+****************************************************/
+.search {
+	display: flex;
+}
+
+/* Table with the list of sites when performing the search */
+table {
+	width: 50%; 
+	color: #fff; /* Search text color */
+	margin-left: 0px; /* Gives a distance from the left margin to the right */
+}
+
+/* Links */
+table a {
+	color: #007bff;
+	font-size: 18px;
+}
+
+/* Title of websites in search */
+h3 {
+	margin: 10px 0px 0px 0px; /* Gives the distance between one site and another */
+}
+
+
+/***************************************************
+				RESULTS TABLE
+***************************************************/
+.mainResultsSection 
+{
+	max-width: 800px;
+	width: 100%;
+	margin: 20px auto;
+	padding: 0 16px;
+}
+
+.mainResultsSection .resultsCount 
+{
+	font-size: 13px;
+	color: #808080;
+	margin-left: 150px;
+}
+
+.mainResultsSection .siteResults 
+{
+	margin-left: 150px;
+}
+
+.resultContainer 
+{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 26px;
+}
+
+.resultContainer .title 
+{
+	margin: 0;
+}
+
+.resultContainer .title a 
+{
+	color: #1a0dab;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.resultContainer .title a:hover 
+{
+	text-decoration: underline;
+}
+
+.resultContainer .url 
+{
+	color: #006621;
+	font-size: 14px;
+}
+
+.resultContainer .description 
+{
+	font-size: 12px;
+}
+
+/* Search results (website, description, link) */
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+.serp-result-item {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 12px 0;
+  transition: background-color 0.3s;
+}
+
+/* Website links */
+.serp-result-item .url {
+  color: #0e6802;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Website titles */
+.serp-result-item h3 {
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+.serp-result-item h3 a {
+  text-decoration: none;
+  color: #007bff;
+}
+/**********************/
+
+.serp-result-item p {
+  font-size: 15px;
+  margin-top: 6px;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+.serp-result-item {
+  color: #fff;
+  background-color: #302f2f;
+  box-shadow: 0 2px 5px rgba(66, 66, 66, 0.15);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 12px 0;
+  transition: background-color 0.3s;
+}
+
+/* Website links */
+.serp-result-item .url {
+  color: #18a006;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Website titles */
+.serp-result-item h3 {
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+.serp-result-item h3 a {
+  text-decoration: none;
+  color: #007bff;
+}
+/**********************/
+
+.serp-result-item p {
+  font-size: 15px;
+  margin-top: 6px;
+}
+}
+
+/* "Results Found" text */
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+.results-found {
+	color: #000;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+.results-found {
+	color: #fff;
+}
+}
+
+/***************************************************
+     				FOOTER 
+***************************************************/
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+.footer {
+	position: relative;
+	width: 100%;
+	background: #fff;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+.footer {
+	position: relative;
+	width: 100%;
+	background: #121212;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+}
+  
+.menu {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	margin: 10px 0;
+	flex-wrap: wrap;
+}
+  
+.menu-elem {
+	list-style: none;
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+.menu-icon {
+	color: black; /* Links color */
+	font-size: 15px;
+	display: inline-block;
+	text-decoration: none;
+	margin: 5px 10px;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+.menu-icon {
+	color: white;
+	font-size: 15px;
+	display: inline-block;
+	text-decoration: none;
+	margin: 5px 10px;
+	opacity: 0.5;
+	transition: 0.3s;
+}
+}
+  
+.menu-icon:hover {
+ opacity: 1;
+ color: #00acff; /* Color when hovering over links */
+}
+
+/* Footer text */
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+.footer-text {
+	color: rgb(2, 2, 2); /* Link color */
+	font-size: 15px;
+	text-decoration: none;
+	opacity: 0.5;
+}
+}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+.footer-text {
+	color: white;
+	font-size: 15px;
+	text-decoration: none;
+	opacity: 0.5;
+}
+}

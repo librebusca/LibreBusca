@@ -1,0 +1,438 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+/* Body */
+html, body {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+/***************************************************
+			MIDDLE OF THE WEBSITE  
+***************************************************/
+/* Main */
+@media (prefers-color-scheme: light) {
+main {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 16px;
+background-color: #fff;
+}
+}
+@media (prefers-color-scheme: dark) {
+main {
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 16px;
+background-color: #121212;
+}
+}
+
+/* Container (square with the FAQ) */
+@media (prefers-color-scheme: light) {
+.container{ /* Where are the things in the middle of the website */
+	width: 100%;
+	align-items: center;
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background: #fff; /* Website background color */
+	transition: .5s;
+}
+}
+@media (prefers-color-scheme: dark) {
+.container{
+	width: 100%;
+	align-items: center;
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background: #121212;
+	transition: .5s;
+}
+}
+
+.perguntas-frequentes {
+	width: 1000px;
+}
+
+.perguntas-frequentes h1 {
+	font-size: 3rem;
+	margin-bottom: 60px;
+}
+
+
+/***************************************************
+					FAQ
+***************************************************/
+.faq {
+	width: 100%; /* Width of the bar with questions and answers */
+	max-width: 700px;
+	list-style: none; /* Remove the dots from the list */
+	transition: .5s; /* Smooths the transition when switching to dark mode */
+}
+
+.faq li {
+	width: 100%;
+	margin-bottom: 10px; /* Increases the margin distance between questions */
+}
+
+/* FAQ TITLE */
+@media (prefers-color-scheme: light) {
+h1{
+	font-family: century gothic;
+	color: #000;
+	letter-spacing: 3px;
+	font-size: 60px;
+	margin-bottom: 30px;
+	transition: 0.2s; /* Makes the color change smoother when hovering over it */
+}
+}
+@media (prefers-color-scheme: dark) {
+h1{
+	font-family: century gothic;
+	color: #fff;
+	letter-spacing: 3px;
+	font-size: 60px;
+	margin-bottom: 30px;
+	transition: 0.2s;
+}
+}
+
+/* Questions */
+@media (prefers-color-scheme: light) {
+.faq li label {
+	padding: 15px 10px; /* Makes the questions move away from the inputs (the box you click on) */
+	font-size: 18px; /* Font size of questions */
+	font-weight: 500; /* Makes the font bold, as if it were in bold */
+	background-color: #fafafa; /* Color of the question bar */
+	color: #000;
+
+	display: flex; /* Makes the background bar of the questions occupy the entire space */
+	align-items: center; /* Centers the text on the page */
+}
+.faq li label span { /* Sets the number on the question side */
+	display: inline-block; /* Allows other properties to be applied to the span */
+	padding: 8px; /* Number spacing */
+	background-color: #d4d0d0; /* Color of the number bar */
+	color: #000; /* Color of numbers */
+	border-radius: 8px; /* Round the edges */
+	margin-right: 10px; /* Right margin, to distance the number slightly from the questions */
+	cursor: pointer; /* Indicates that the question bar is clickable */
+}
+}
+@media (prefers-color-scheme: dark) {
+.faq li label {
+	padding: 15px 10px;
+	font-size: 18px;
+	font-weight: 500;
+	background-color: #1d1d1e;
+	color: #fff;
+
+	display: flex;
+	align-items: center;
+}
+.faq li label span {
+	display: inline-block;
+	padding: 8px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 8px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+}
+/********************/
+
+.faq li label::before { /* Creates a pseudo-element before the label */
+	content: '+'; /* Plus sign next to the number of questions */
+	margin-right: 10px; /* Move away a little from the number of questions */
+	font-size: 24px; /* Size of the plus sign */
+}
+
+.faq input[type=radio] {
+	display: none; /* Removes the input, i.e., the click button, but the click functionality remains in the question bar */
+}
+
+/* Answers */
+@media (prefers-color-scheme: light) {
+.faq .resposta { /* Configure the anwsers */
+	font-size: 18px; /* Font size of anwsers */
+	color: #000; /* Color of anwsers */
+	padding: 0px 14px; /* Gives spacing on the side and above, creating distance */
+	background-color: #fafafa; /* Color of the answer bar */
+	line-height: 20px; /* Add spacing between lines of answers */
+	max-height: 0; /* Maximum height of the anwser bar. Setting it to zero makes the bar disappear. */
+	overflow: hidden; /* Hide everything that leaks from the bar structure */
+	transition: max-height .5s, padding .5s; /* Applies a smoother transition from point A to point B. Then applies smoothing when the anwser bar appears. */
+}
+}
+@media (prefers-color-scheme: dark) {
+.faq .resposta {
+	font-size: 18px;
+	color: #fff;
+	padding: 0px 14px;
+	background-color: #1d1d1e;
+	line-height: 20px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .5s, padding .5s;
+}
+}
+
+.faq .resposta a {
+	color: #00acff; /* Color of links in anwsers */
+	font-size: 18px; /* Font size of links in anwsers */
+	line-height: 20px; /* Adds spacing between lines of anwsers */
+}
+
+.faq input[type=radio]:checked + label + .resposta { /* Capture the moment when the input (box) is selected and determine the animation that will occur in the anwsers */
+	max-height: 400px; /* Maximum height of the anwser bar. Now make the bar appear. */
+	padding: 10px 10px 20px;
+}
+
+.faq input[type=radio]:checked + label span { /* Capture the moment when the input (box) is selected and determine what will happen to the question numbers. */
+	background-color: #00acff; /* Color that the number box turns when you click on the questions. */
+}
+
+.faq input[type=radio]:checked + label::before {
+	content: '-'; /* Minus sign on the side of the number of questions. */
+}
+
+/***************************************************
+					NAVBAR
+***************************************************/
+/* Links and texts */
+@media (prefers-color-scheme: light) {
+li, a{
+	font-size: 13px; /* Font size of links */
+	color: #000; /* Text and link color */
+	text-decoration: none; /* Remove the underscore from links */
+	list-style-type: none; /* Remove the dots from the side of the links */
+}
+
+}
+@media (prefers-color-scheme: dark) {
+li, a{
+	font-size: 13px;
+	color: #fff;
+	text-decoration: none;
+	list-style-type: none;
+}
+}
+
+/* Menu bar with links */
+@media (prefers-color-scheme: light) {
+.bottom-header {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center; /* Place in the middle of the page */
+	background-color: #fafafa;
+	padding: 10px 20px;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+.bottom-header {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #09090b;
+	padding: 10px 20px;
+}
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-links li {
+	display: inline-block;
+	padding: 0px 20px;
+	transition: 0.2s; /* Makes the color change smoother when hovering over it */
+}
+
+.nav-links li a:hover {
+	color: #00acff;
+}
+
+/***************************************************
+			MAKES NAVBAR RESPONSIVE
+***************************************************/
+@media (min-width: 960px) { /* Makes everything apply to devices with a minimum screen width of 960px */
+	.hide-on-desktop { /* Hide from desktops */
+		display: none;
+	}
+}
+
+@media (max-width: 960px) { /* Applies the settings here to screens with 960px or less, i.e., mobile phones */
+	
+	/* Makes the search bar responsive */
+	.interface {
+		width: 85%;
+		max-width: 100%;
+		margin: 0 auto;
+
+	}
+	/*******************************/
+	
+	@media (prefers-color-scheme: light) {
+	.nav-links {
+		opacity: 0; /* Prevents links from starting appearing on the screen */
+		top: 0;
+		transform: translateY(-140%); /* Move the navbar up */
+		/* The JavaScript will make all of the above reappear */
+
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		display: flex;
+		flex-direction: column; /* Places links one below the other */
+		background-color: #fafafa; /* Bar color */
+		box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px;
+		padding: 32px 0; /* Gives a spacing of 32px above and below; and 0 on the sides */
+		border-top: outset; /* Creates a border separating the bars */
+		gap: 0; /* Remove spacing between links */
+	 }
+    }
+	@media (prefers-color-scheme: dark) {
+	.nav-links {
+		opacity: 0;
+		top: 0;
+		transform: translateY(-140%);
+
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		display: flex;
+		flex-direction: column;
+		background-color: #121212;
+		box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px;
+		padding: 32px 0;
+		border-top: outset;
+		gap: 0;
+	 }
+    }
+	.nav-links.show {
+		opacity: 1;
+		top: 100%;
+		transform: translateY(0);
+	}
+
+	.nav-links li {
+		text-align: center; /* Makes the links centered on the bar */
+	}
+
+	@media (prefers-color-scheme: light) {
+	.nav-links li a {
+		line-height: 40px; /* Adds spacing between links */
+		width: 100%; /* Makes links take up the maximum width of the available screen */
+		display: block;
+		color: #000; /* Links color */
+	}
+    }
+	@media (prefers-color-scheme: dark) {
+	.nav-links li a {
+		line-height: 40px;
+		width: 100%;
+		display: block;
+		color: #fff;
+	}
+    }
+
+	/* Makes the hamburger menu appear */
+	.menu-hamb-button {
+		display: flex;
+		flex-direction: column;
+		gap: 6px; /* Spacing between lines of the hamburger icon */
+	}
+
+	.btn-line {
+		width: 24px;
+		height: 3px;
+		background-color: #00acff; /* Color of the three lines of the hamburger mode icon */
+	}
+	/***********************************/
+}
+
+
+/***************************************************
+					FOOTER
+***************************************************/
+@media (prefers-color-scheme: light) {
+footer {
+	background-color: var(--color-neutral-10);
+	width: 100%; /* Footer bar width */
+	margin: 0 auto;
+	padding: 16px;
+	
+	
+	display: flex;
+	justify-content: center; /* Place text in the middle of the page */
+	align-items: center;
+	padding: 15px 15px; /* Height and width of the navbar */
+	background-color: #fafafa; /* Color of the navbar */
+
+	transition: .5s;
+}
+}
+@media (prefers-color-scheme: dark) {
+footer {
+	background-color: var(--color-neutral-10);
+	width: 100%;
+	margin: 0 auto;
+	padding: 16px;
+	
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 15px;
+	background-color: #09090b;
+
+	transition: .5s;
+}
+}
+
+.rodape {
+	color: #8c8c8c; /* Text color  */
+	font-size: 15px;
+	text-align: center;
+	
+}
+
+/* MAKE THE MIDDLE OF WEBSITE AND THE FAQ RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .faq {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+}
