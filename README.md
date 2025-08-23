@@ -2,6 +2,11 @@
 ## About The Project
 Libre Busca is an open source search engine project that is lightweight, does not rely on third-party scripts, does not collect cookies or user data, does not display ads, and, above all, is uncensored.
 We want users to find exactly what they are looking for.
+![main-light](https://ibb.co/Rk78tVCD)
+![results-dark](https://ibb.co/1tBDNJJh)
+![results-light](https://ibb.co/wh020dt9)
+![sendlinks-light](https://ibb.co/KjhG1SwL)
+![errorpage-light](https://ibb.co/4nGkhQrc)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -79,6 +84,8 @@ In HeidiSQL, set the user as “admin” instead of “root.”
 Open HeidiSQL and click on “New”, then “” and enter the name “localhost” (or any name you wish), in “User” enter the name you want for your user and in ‘Password’ enter a strong password, then click on “open”.
 Right-click on “localhost,” go to “Create New” -> “Database,” and name it “librebusca.” Then click on the librebusca database, go to “File,” then “Load SQL File...” and select the “websites.sql” file in the ‘database’ folder. Then just click ‘yes’ for Heidi to automatically detect the file encoding. Now click “Execute SQL...” or press F9 to run it.
 
+
+
 **INSTALLING APACHE + PHP**
 Install Apache, PHP, and necessary modules. In the terminal, type:
 ```sh
@@ -106,6 +113,8 @@ sudo apt install phpmyadmin
 ```
 Then go to: http://localhost/phpmyadmin
 
+
+
 <!-- LB CONFIGURATION -->
 ## Configuration
 **How do I change the maximum number of words/characters people can type in the search?**
@@ -127,7 +136,7 @@ If you want to add a favicon with a different name or format, you will need to c
 - [x] Complete and functional website capable of performing searches
 - [ ] Improve the PHP/SQL code of the search engine
     - [ ] Making a pagination system
-- [ ] Create a “safe mode” system where adult content, for example, will be hidden from users' searches by the users themselves in the settings.
+    - [ ] Create a “safe mode” system where adult content, for example, will be hidden from users' searches by the users themselves in the settings.
 - [ ] Create a web crawler to automate website cataloging
 - [ ] Create a separate search page just for videos
 
