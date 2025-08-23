@@ -19,7 +19,9 @@ I started this project on my own without knowing how to code. I studied and work
 Download the Libre Busca files. In a MySQL database, create a database called “librebusca,” then host the “websites.sql” file, which is in the “database” folder, in a table. Configure the database username and password in the “.env” file, then rename it by deleting “.example,” leaving only “.env.” Then just host the website locally or in the cloud.
 
 **To install LibreBusca, you will need: a web server (Apache or Nginx) + a database (MySQL or MariaDB) + a web interface/graphical client for managing databases (phpMyAdmin or HeidiSQL) [Optional] + PHP (to run the website scripts).**
-
+<br>
+<br>
+<br>
 ### With XAMPP + Apache + MySQL/MariaDB + phpMyAdmin
 Install XAMPP, then go to the XAMPP folder, find the “htdocs” folder, and place the Libre Busca folder inside it. Open XAMPP and start Apache and MySQL, then type http://localhost/phpmyadmin/ in your browser. Click on “new” and create a database with the name ‘librebusca’, then click on “import” and select the websites.sql file to import the websites.
 Now to access the website, type //localhost/librebusca in your browser.
