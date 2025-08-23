@@ -2,6 +2,10 @@
 ## About The Project
 Libre Busca is an open source search engine project that is lightweight, does not rely on third-party scripts, does not collect cookies or user data, does not display ads, and, above all, is uncensored.
 We want users to find exactly what they are looking for.
+Is it possible to catalog the entire internet? With the help of something called a “web crawler,” it is possible to automate the cataloging of websites quickly and easily. This same method is used by major search engines. So yes, it is possible to have a search engine with a huge database in a practical way.
+I started this project on my own without knowing how to code. I studied and worked on this project for months, and I think it is now ready to be launched. However, I need the help of people who understand coding (PHP, SQL, etc.) to help with the project and make it much bigger and better.
+
+
 ![main-light](https://i.ibb.co/pBnqN93L/01.png)
 ![results-dark](https://i.ibb.co/MxKYH55W/06.png)
 ![results-light](https://i.ibb.co/m5DPDRpL/02.png)
