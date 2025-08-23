@@ -2,11 +2,11 @@
 ## About The Project
 Libre Busca is an open source search engine project that is lightweight, does not rely on third-party scripts, does not collect cookies or user data, does not display ads, and, above all, is uncensored.
 We want users to find exactly what they are looking for.
-![main-light](https://ibb.co/Rk78tVCD)
-![results-dark](https://ibb.co/1tBDNJJh)
-![results-light](https://ibb.co/wh020dt9)
-![sendlinks-light](https://ibb.co/KjhG1SwL)
-![errorpage-light](https://ibb.co/4nGkhQrc)
+[![main-light](https://i.ibb.co/pBnqN93L/01.png)
+[![results-dark](https://i.ibb.co/MxKYH55W/06.png)
+[![results-light](https://i.ibb.co/m5DPDRpL/02.png)
+[![sendlinks-light](https://i.ibb.co/svRPBzH6/03.png)
+[![errorpage-light](https://i.ibb.co/wFXt5vmT/04.png)
 
 <!-- GETTING STARTED -->
 ## Getting Started
