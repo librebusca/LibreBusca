@@ -114,9 +114,10 @@ In Ubuntu, the equivalent of the “htdocs” folder in XAMPP is /var/www/html. 
 ```sh
 sudo cp -r /path/folder/librebusca/* /var/www/html/librebusca/
 ```
-
+<br>
 Now, to access the website, type the following into your browser: http://localhost/librebusca
-
+<br>
+<br>
 PHPMYADMIN (OPTIONAL)
 Install it by typing in the terminal:
 ```sh
