@@ -107,17 +107,17 @@ To test Apache, go to your browser and type:
 http://localhost
 <br>
 (The “Apache2 Ubuntu Default Page” should appear.)
-<br>
-<br>
+
+
 In Ubuntu, the equivalent of the “htdocs” folder in XAMPP is /var/www/html. Paste the LibreBusca folder there.
-<br>
+
 ```sh
 sudo cp -r /path/folder/librebusca/* /var/www/html/librebusca/
 ```
-<br>
+
 Now, to access the website, type the following into your browser: http://localhost/librebusca
-<br>
-<br>
+
+
 PHPMYADMIN (OPTIONAL)
 Install it by typing in the terminal:
 ```sh
