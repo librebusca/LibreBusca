@@ -102,12 +102,15 @@ sudo apt update
 sudo apt install apache2 php libapache2-mod-php php-mysql -y
 ```
 <br>
-To test Apache, go to your browser and type:
+To test Apache, go to your browser and type: 
+<br>
 http://localhost
 <br>
 (The “Apache2 Ubuntu Default Page” should appear.)
 <br>
+<br>
 In Ubuntu, the equivalent of the “htdocs” folder in XAMPP is /var/www/html. Paste the LibreBusca folder there.
+<br>
 ```sh
 sudo cp -r /path/folder/librebusca/* /var/www/html/librebusca/
 ```
