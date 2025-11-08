@@ -17,6 +17,7 @@ I started this project on my own without knowing how to code. I studied and work
 <!-- GETTING STARTED -->
 ## Getting Started
 **LOCAL**
+<br>
 Download the Libre Busca files. In a database (MySQl, MariaDB) + a web interface/graphical client for managing databases (phpMyAdmin, HeidiSQL), create a database called “librebusca,” then  import the “websites.sql” file, which is in the “database” folder, in a table. Configure the database username and password in the “.env” file, then rename it by deleting “.example,” leaving only “.env”. Then just host the website with a web server (Apache for Windows or Nginx for Linux).
 
 **To install LibreBusca, you will need: a web server (Apache or Nginx) + a database (MySQL or MariaDB) + a web interface/graphical client for managing databases (phpMyAdmin or HeidiSQL) [Optional] + PHP (to run the website scripts).**
