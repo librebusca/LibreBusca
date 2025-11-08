@@ -148,12 +148,13 @@ If you want to add a favicon with a different name or format, you will need to c
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Complete and functional website capable of performing searches
-- [ ] Improve the PHP/SQL code of the search engine
-    - [ ] Making a pagination system
+- [x] Complete and functional website capable of performing searches.
+- [ ] Improve the PHP/SQL code of the search engine:
+    - [ ] Highlight all searched words found in the search (in the title, URL, and description).
+    - [ ] Making a pagination system.
     - [ ] Create a “safe mode” system where adult content, for example, will be hidden from users' searches by the users themselves in the settings.
-- [ ] Create a web crawler to automate website cataloging
-- [ ] Create a separate search page just for videos
+- [ ] Create a web crawler to automate website cataloging.
+- [ ] Create a separate search page just for videos.
 
 <!-- CONTRIBUTING -->
 ## Contributing
