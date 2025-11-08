@@ -99,11 +99,9 @@ sudo cp -r /path/folder/librebusca/* /var/www/html/librebusca/
 <br>
 Now, to access the website, type the following into your browser: http://localhost/librebusca
 
-<br>
 PHPMYADMIN (OPTIONAL)
 Install it by typing in the terminal:
 ```sh
 sudo apt install phpmyadmin
 ```
-<br>
 Then go to: http://localhost/phpmyadmin
