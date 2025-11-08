@@ -23,19 +23,22 @@ Download the Libre Busca files. In a database (MySQl, MariaDB) + a web interface
 **To install LibreBusca, you will need: a web server (Apache or Nginx) + a database (MySQL or MariaDB) + a web interface/graphical client for managing databases (phpMyAdmin or HeidiSQL) [Optional] + PHP (to run the website scripts).**
 <br>
 ## How to use
-To learn how to use Libre Busca, please refer to the complete [instructions](instructions.md) (available for both Windows and Linux).
+To learn how to use Libre Busca, please refer to the complete [instructions](instructions.md).
 
 <!-- LB CONFIGURATION -->
 ## Configuration
 **How do I change the maximum number of words/characters people can type in the search?**
+<br>
 On the “index.php” and “results.php” pages, look for the line below:
 <input type="text" name="search" placeholder="Vincit omnia veritas..." maxlength=""> 
 The “maxlength” command determines the maximum number of letters that can be entered. Enter the maximum number of characters you want users to be able to type in the search field.
 
 **Send Links page**
+<br>
 The “send-links” page was created so that you can quickly, easily, and simply submit websites to the database. However, be careful that other people do not have access to this page and submit unwanted websites or attempt an attack. Change the name of the “send-links” page and remove the link to this page from your LB.
 
 **Favicon**
+<br>
 To add a favicon to your website, place a favicon named “icon” in .png format in the “img” folder.
 If you want to add a favicon with a different name or format, you will need to change the line below on all pages:
 <link rel="icon" type="image/png" href="img/icon.png">
