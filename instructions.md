@@ -1,10 +1,12 @@
 <!-- GETTING STARTED -->
 ## How to use on Windows
 ### With XAMPP + Apache + MySQL/MariaDB + phpMyAdmin
-Install XAMPP, then go to the XAMPP folder, find the “htdocs” folder, and place the Libre Busca folder inside it. Open XAMPP and start Apache and MySQL, then type http://localhost/phpmyadmin/ in your browser. Click on “new” and create a database with the name ‘librebusca’, then click on “import” and select the websites.sql file to import the websites.
+Install XAMPP, then go to the XAMPP folder, find the “htdocs” folder, and place the Libre Busca folder inside it. Open XAMPP and start Apache and MySQL, then type http://localhost/phpmyadmin/ in your browser. Click on “new” and create a database with the name ‘librebusca’, then click on “import” and select the 'websites.sql' file to import the websites.
+<br>
 Now to access the website, type //localhost/librebusca in your browser.
-
-XAMPP comes with Apache, MySL, and phpMyAdmin installed by default.
+<br>
+<br>
+XAMPP comes with Apache, MySQL, and phpMyAdmin installed by default.
 
 **Use XAMPP only for testing or personal use, because if you use it to make the website public and accessible to everyone, it will pose a security risk, as anyone will be able to access your personal computer. If you want to make a public website, use a paid cloud service or at least HeideSQL + MariaDB. Only set up a local server if you have another computer to use as a server and know how to configure everything.**
 
