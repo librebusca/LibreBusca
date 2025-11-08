@@ -64,4 +64,4 @@ Any contributions you make are greatly appreciated.
 
 Distributed under the GPL v3. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#README.md">back to top</a>)</p>
