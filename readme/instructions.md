@@ -23,7 +23,7 @@ In the Nginx "config" folder, open the **nginx.config** file, copy the 'root' an
         index  index.php index.html index.htm;
 ```
 
-In **Location**, delete what is inside the ```sh try_files $uri $uri/ =404 ```sh, for example:
+In **Location**, delete what is inside the ```sh try_files $uri $uri/ =404```, for example:
 ```sh
 location / {
            try_files $uri $uri/ /index.php?$query_string; (delete this)
@@ -47,7 +47,7 @@ In the **Server** "root" line, delete “html”, change to the LibreBusca folde
 
 Then comment on the entire **Location** section. 
 
-Uncomment the entire section below and change the line ```sh /scripts$fastcgi_script_name; ``` to ```sh fastcgi_param SCRIPT_FILENAME C:/Users/User/Downloads/nginx-1.29.3/html/libre$fastcgi_script_name; ```. Example:
+Uncomment the entire section below and change the line ```sh /scripts$fastcgi_script_name;``` to ```sh fastcgi_param SCRIPT_FILENAME C:/Users/User/Downloads/nginx-1.29.3/html/libre$fastcgi_script_name;```. Example:
 ```sh
 location ~ \.php$ {
             root           html;
@@ -60,7 +60,9 @@ location ~ \.php$ {
 
 
 **Configuring PHP**
+<br>
 Download PHP (Download the NTS [non-threaded] version).
+<br>
 Rename the **php.ini-development** file to **php.ini**, then open it and enable the necessary extensions below (remove the semicolon at the beginning of the lines to do this):
 ```sh
 ;extension_dir = "ext"
