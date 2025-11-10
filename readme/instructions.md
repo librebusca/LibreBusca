@@ -23,12 +23,12 @@ In the Nginx "config" folder, open the **nginx.config** file, copy the 'root' an
         index  index.php index.html index.htm;
 ```
 <br>
-In **Location**, delete what is inside the "try_files $uri $uri/ =404", for example:
+In **Location** delete what is inside the "try_files $uri $uri/ =404", for example:
 ```sh
 location / {
            try_files $uri $uri/ /index.php?$query_string; (delete this)
          }
- ```
+```
 <br>
 Above **Location**, paste the code below:
 # Configuration for static files (.css, .js, images)
