@@ -22,14 +22,14 @@ In the Nginx "config" folder, open the **nginx.config** file, copy the 'root' an
         root   html;
         index  index.php index.html index.htm;
 ```
-<br>
+
 In **Location**, delete what is inside the "try_files $uri $uri/ =404", for example:
 ```sh
 location / {
            try_files $uri $uri/ /index.php?$query_string; (delete this)
            }      
 ```
-<br>
+
 Above **Location**, paste the code below:
 ```sh
 # Configuration for static files (.css, .js, images)
@@ -38,15 +38,15 @@ Above **Location**, paste the code below:
            try_files $uri $uri/ =404; #Used for archives CSS, JS, images
          }
 ```
-<br>
+
 In the **Server** "root" line, delete “html”, change to the LibreBusca folder path in html on your Nginx, and place the normal slash to the right /, not to the left \ as in Windows. Example:
 ```sh
  server {
         root   C:/Users/User/Downloads/nginx-1.29.3/html/LibreBusca;
 ```
-<br>
+
 Then comment on the entire **Location** section. 
-<br>
+
 Uncomment the entire section below and change the line ```sh /scripts$fastcgi_script_name; ``` to ```sh fastcgi_param SCRIPT_FILENAME C:/Users/User/Downloads/nginx-1.29.3/html/libre$fastcgi_script_name; ```. Example:
 ```sh
 location ~ \.php$ {
@@ -57,8 +57,8 @@ location ~ \.php$ {
             include        fastcgi_params;
         }
 ```
-<br>
-<br>
+
+
 **Configuring PHP**
 Download PHP (Download the NTS [non-threaded] version).
 Rename the **php.ini-development** file to **php.ini**, then open it and enable the necessary extensions below (remove the semicolon at the beginning of the lines to do this):
@@ -74,7 +74,7 @@ And configure the time zone
 ```sh
 date.timezone = "America/Sao_Paulo"
 ```
-<br>
+
 Open a CMD in the PHP folder and start PHP as a FastCGI server (leave this cmd open, it is the PHP server; if you close it, nginx will not be able to process PHP) using the command ```sh php-cgi.exe -b 127.0.0.1:9000 ```.
 <br>
 **Configuring MariaDB**
