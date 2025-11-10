@@ -23,19 +23,21 @@ In the Nginx "config" folder, open the **nginx.config** file, copy the 'root' an
         index  index.php index.html index.htm;
 ```
 <br>
-In **Location** delete what is inside the "try_files $uri $uri/ =404", for example:
+In **Location**, delete what is inside the "try_files $uri $uri/ =404", for example:
 ```sh
 location / {
            try_files $uri $uri/ /index.php?$query_string; (delete this)
-         }
+           }      
 ```
 <br>
 Above **Location**, paste the code below:
+```sh
 # Configuration for static files (.css, .js, images)
          location /assets/ {
            root C:/Users/User/Downloads/nginx-1.29.3/html/librebusca; #Path where static files are located
            try_files $uri $uri/ =404; #Used for archives CSS, JS, images
          }
+```
 <br>
 In the **Server** "root" line, delete “html”, change to the LibreBusca folder path in html on your Nginx, and place the normal slash to the right /, not to the left \ as in Windows. Example:
 ```sh
