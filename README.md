@@ -23,7 +23,7 @@ Download the Libre Busca files. In a database (MySQl, MariaDB) + a web interface
 **To install LibreBusca, you will need: a web server (Apache or Nginx) + a database (MySQL or MariaDB) + a web interface/graphical client for managing databases (phpMyAdmin or HeidiSQL) [Optional] + PHP (to run the website scripts).**
 <br>
 ## How to use
-To learn how to use Libre Busca, please refer to the complete [instructions](instructions.md).
+To learn how to use Libre Busca, please refer to the complete [instructions](readme/instructions.md).
 
 <!-- LB CONFIGURATION -->
 ## Configuration
@@ -64,4 +64,4 @@ Any contributions you make are greatly appreciated.
 
 Distributed under the GPL v3. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#README.md">back to top</a>)</p>
+<p align="right">(<a href="README.md">back to top</a>)</p>
