@@ -51,6 +51,7 @@ If you want to add a favicon with a different name or format, you will need to c
     - [ ] Highlight all searched words found in the search (in the title, URL, and description).
     - [ ] Making a pagination system.
     - [ ] Create a “safe mode” system where adult content, for example, will be hidden from users' searches by the users themselves in the settings.
+    - [ ] Make that websites with the most searched terms and the most views remain at the top.
 - [ ] Create a web crawler to automate website cataloging.
 - [ ] Create a separate search page just for videos.
 
