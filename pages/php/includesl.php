@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-// Carrega o .env
+// Load the .env
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
@@ -10,18 +10,18 @@ if (isset($_POST['submit'])) {
     $site_link = $_POST['site_link'];
     $site_description = $_POST['site_description'];
 
-    // Pega dados do banco a partir do .env
+    // Get data from the database using .env
     $dsn = "mysql:host={$_ENV['DB_HOST']};dbname={$_ENV['DB_NAME']}";
 
     try {
         $con = new PDO(
             $dsn,
-            $_ENV['DB_USER'], // Usuário
-            $_ENV['DB_PASS']  // Senha
+            $_ENV['DB_USER'], // User
+            $_ENV['DB_PASS']  // Password
         );
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Verifica se o site já existe
+        // Check if the website already exists
         $sql_check = "SELECT COUNT(*) FROM websites WHERE site_link = :site_link";
         $statement_check = $con->prepare($sql_check);
         $statement_check->execute([
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
                 });
             </script>";
         } else {
-            // Insere novo registro
+            // Insert new record
             $sql = "INSERT INTO websites (site_title, site_link, site_description) 
                     VALUES (:site_title, :site_link, :site_description)";
             $statement = $con->prepare($sql);
