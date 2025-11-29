@@ -17,8 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/results.css">
     <script src="js/anontab.js"></script> <!-- JavaScript code for the tab to change title when the user goes to another tab -->
     <script src="js/navbarresponsive.js" async></script> <!-- JavaScript code to make the navbar responsive. The ‘async’ attribute ensures that the JavaScript code is only executed after the HTML has been fully loaded -->
-    <script src="js/darkmode.js" async></script> <!-- Javascript para fazer o dark mode funcionar -->
-
+    <script src="js/settingsbutton.js"></script> <!-- Switch dark mode script --->
 
 </head>
 
