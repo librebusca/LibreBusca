@@ -13,9 +13,9 @@ html, body {
 	flex-direction: column;
 }
 
-/***************************************************
-			MIDDLE OF THE WEBSITE  
-***************************************************/
+/* ============================================
+     		MIDDLE OF THE WEBSITE
+============================================== */
 /* Main */
 @media (prefers-color-scheme: light) {
 main {
@@ -76,9 +76,9 @@ background-color: #121212;
 }
 
 
-/***************************************************
-					FAQ
-***************************************************/
+/* ============================================
+     				FAQ
+============================================== */
 .faq {
 	width: 100%; /* Width of the bar with questions and answers */
 	max-width: 700px;
@@ -213,9 +213,9 @@ h1{
 	content: '-'; /* Minus sign on the side of the number of questions. */
 }
 
-/***************************************************
-					NAVBAR
-***************************************************/
+/* ============================================
+     				NAVBAR
+============================================== */
 /* Links and texts */
 @media (prefers-color-scheme: light) {
 li, a{
@@ -274,9 +274,9 @@ li, a{
 	color: #00acff;
 }
 
-/***************************************************
-			MAKES NAVBAR RESPONSIVE
-***************************************************/
+/* ============================================
+     		MAKES NAVBAR RESPONSIVE
+============================================== */
 @media (min-width: 960px) { /* Makes everything apply to devices with a minimum screen width of 960px */
 	.hide-on-desktop { /* Hide from desktops */
 		display: none;
@@ -376,9 +376,9 @@ li, a{
 }
 
 
-/***************************************************
-					FOOTER
-***************************************************/
+/* ============================================
+     			  	FOOTER
+============================================== */
 @media (prefers-color-scheme: light) {
 footer {
 	background-color: var(--color-neutral-10);
@@ -435,4 +435,127 @@ footer {
     font-size: 36px;
     text-align: center;
   }
+}
+
+/* ============================================
+     		DARK MODE VIA SWITCH
+============================================== */
+/* ---------- SWITCH DARK MODE ---------- */
+body.dark main {
+background-color: #121212 !important;
+}
+body.dark .container {
+	background: #121212 !important;
+}
+
+body.dark h1 {
+	color: #fff !important;
+}
+
+body.dark .faq li label {
+	background-color: #1d1d1e !important;
+	color: #fff !important;
+}
+body.dark .faq li label span {
+	background-color: #000 !important;
+	color: #fff !important;
+}
+
+body.dark .faq .resposta {
+	color: #fff !important;
+	background-color: #1d1d1e !important;
+}
+
+body.dark .faq .resposta a {
+	color: #00acff !important; /* Color of links in anwsers */
+}
+
+.faq input[type=radio]:checked + label span { /* Capture the moment when the input (box) is selected and determine what will happen to the question numbers. */
+	background-color: #00acff !important; /* Color that the number box turns when you click on the questions. */
+}
+
+body.dark li, a {
+	color: #fff !important;
+}
+
+body.dark .bottom-header {
+	background-color: #09090b !important;
+}
+
+body.dark .nav-links {
+	background-color: #121212 !important;
+	box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px !important;
+}
+
+body.dark .nav-links li a {
+	color: #fff !important;
+}
+
+body.dark .nav-links li a:hover {
+	color: #00acff !important;
+}
+
+body.dark footer {
+	background-color: var(--color-neutral-10) !important;
+	background-color: #09090b !important;
+}
+
+body.dark .rodape {
+	color: #8c8c8c !important; /* Text color  */
+	
+}
+/* ---------- SWITCH LIGHT MODE ---------- */
+body.light main {
+background-color: #fff !important;
+}
+body.light .container { /* Where are the things in the middle of the website */
+	background: #fff !important; /* Website background color */
+}
+
+body.light h1 {
+	color: #000 !important;
+}
+
+body.light .faq li label {
+	background-color: #fafafa !important; /* Color of the question bar */
+	color: #000 !important;
+}
+body.light .faq li label span {
+	background-color: #d4d0d0 !important; /* Color of the number bar */
+	color: #000 !important; /* Color of numbers */
+}
+
+body.light .faq .resposta { /* Configure the anwsers */
+	color: #000 !important; /* Color of anwsers */
+	background-color: #fafafa !important; /* Color of the answer bar */
+}
+
+body.light li, a {
+	color: #000 !important; /* Text and link color */
+}
+
+body.light .bottom-header {
+	background-color: #fafafa !important;
+}
+
+body.light .nav-links {
+	background-color: #fafafa !important; /* Bar color */
+	box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px !important;
+}
+
+body.light .nav-links li a {
+	color: #000 !important; /* Links color */
+}
+
+body.light .nav-links li a:hover {
+	color: #00acff !important;
+}
+
+body.light footer {
+	background-color: var(--color-neutral-10) !important;
+	background-color: #fafafa !important; /* Color of the navbar */
+}
+
+body.light .rodape {
+	color: #8c8c8c !important; /* Text color */
 }

@@ -5,9 +5,9 @@
 	box-sizing: border-box;
 }
 
-/***************************************************
-					BODY
-***************************************************/
+/* ============================================
+     				BODY
+============================================== */
 html, body { 
 	height: 100%;
 	margin: 0;
@@ -16,9 +16,9 @@ html, body {
 }
 
 
-/***************************************************
-			MIDDLE OF THE WEBSITE
-***************************************************/
+/* ============================================
+     		MIDDLE OF THE WEBSITE
+============================================== */
 /* Main */
 @media (prefers-color-scheme: light) {
 main {
@@ -71,9 +71,9 @@ background-color: #121212;
 }
 }
 
-/***************************************************
-					NAVBAR
-***************************************************/
+/* ============================================
+     				NAVBAR
+============================================== */
 /* Links and texts */
 @media (prefers-color-scheme: light) {
 li, a{
@@ -130,9 +130,9 @@ li, a{
 	color: #00acff; /* Makes it show a color when you hover over the link */
 }
 
-/***************************************************
-			MAKES THE NAVBAR RESPONSIVE
-***************************************************/
+/* ============================================
+     	MAKES THE NAVBAR RESPONSIVE
+============================================== */
 @media (min-width: 960px) { /* Makes everything apply to devices with a minimum screen width of 960px */
 	.hide-on-desktop { /* Hide on desktops */
 		display: none;
@@ -231,9 +231,9 @@ li, a{
 	/***********************************/
 }
 
-/***************************************************
-					FORM
-***************************************************/
+/* ============================================
+     				FORM
+============================================== */
 /* Form title */
 @media (prefers-color-scheme: light) {
 h2.titulo {
@@ -346,9 +346,9 @@ SUCCESS/FAILURE MESSAGE WHEN SENDING WEBSITE TO DATABASE IN SEND LINKS
 }
 
 
-/***************************************************
-					FOOTER
-***************************************************/
+/* ============================================
+     				FOOTER
+============================================== */
 @media (prefers-color-scheme: light) {
 footer{
 	background-color: var(--color-neutral-10);
@@ -392,3 +392,128 @@ footer{
 	
 }
 
+/* ============================================
+     		DARK MODE VIA SWITCH
+============================================== */
+/* ---------- SWITCH LIGHT MODE ---------- */
+body.light main {
+background-color: #fff !important;
+}
+
+body.light .container {
+	background: #fff !important; /* Website background color */
+}
+
+body.light li, a {
+	color: #000 !important; /* Text and link color */
+}
+
+body.light .bottom-header {
+	background-color: #fafafa !important;
+}
+
+body.light .nav-links {
+	background-color: #fafafa !important; /* Bar color */
+	box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px !important;
+}
+
+body.light .nav-links li a {
+	color: #000 !important; /* Links color */
+}
+
+body.light .nav-links li a:hover{
+	color: #00acff !important; /* Makes it show a color when you hover over the link */
+}
+
+body.light h2.titulo {
+	color: #000 !important; /* Title color */
+}
+
+body.light h2.titulo span {
+	color:#00acff !important; /* Secondary title color */
+	transition: 0.2s !important; /* Makes the color change smoother when hovering over it */
+}
+
+body.light button:hover, body.light form .btn-enviar input:hover {
+	box-shadow: 0px 0px 8px #00acff !important; /* Button shadow */
+	transform: scale(1.05) !important;
+}
+
+body.light form input {
+	background-color: #fafafa !important; /* Color of the bars for sending messages */
+	color: #000 !important; /* Text color */
+}
+
+body.light footer {
+	background-color: var(--color-neutral-10) !important;
+	background-color: #fafafa !important; /* Color of the navbar */
+	transition: .5s !important;
+}
+
+body.light form .btn-enviar input {
+	background-color: #00acff !important; /* Color of the submit button */
+	color: #fff !important; /* Color of the submit button text */
+	transition: .2s !important; /* Smooth shadow transition when hovering over the button */
+}
+
+/* ---------- SWITCH DARK MODE ---------- */
+body.dark main {
+background-color: #121212 !important;
+}
+
+body.dark .container {
+	background: #121212 !important;
+}
+
+body.dark li, a {
+	color: #fff !important;
+}
+
+body.dark .bottom-header {
+	background-color: #09090b !important;
+}
+
+body.light .nav-links {
+	background-color: #121212 !important;
+	box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px !important;
+}
+
+body.dark .nav-links li a {
+	color: #fff !important;
+}
+
+body.dark .nav-links li a:hover{
+	color: #00acff !important; /* Makes it show a color when you hover over the link */
+}
+
+body.dark h2.titulo {
+	color: #fff !important;
+	transition: 0.2s !important;
+}
+
+body.dark h2.titulo span {
+	color:#00acff !important; /* Secondary title color */
+	transition: 0.2s !important; /* Makes the color change smoother when hovering over it */
+}
+
+body.dark button:hover, body.dark form .btn-enviar input:hover {
+	box-shadow: 0px 0px 8px #00acff !important; /* Button shadow */
+	transform: scale(1.05) !important;
+}
+
+body.dark form input {
+	background-color: #1d1d1e !important;
+	color: #fff !important;
+}
+
+body.dark footer {
+	background-color: var(--color-neutral-10) !important;
+	background-color: #09090b !important;
+	transition: .5s !important;
+}
+
+body.dark form .btn-enviar input {
+	background-color: #00acff !important; /* Color of the submit button */
+	color: #fff !important; /* Color of the submit button text */
+	transition: .2s !important; /* Smooth shadow transition when hovering over the button */
+}

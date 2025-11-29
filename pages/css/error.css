@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-/***************************************************
-					            BODY
-***************************************************/
+/* ============================================
+     			          BODY
+============================================== */
 @media (prefers-color-scheme: light) {
 body {
   background-color: #fff;
@@ -35,10 +35,9 @@ li, a{
 	list-style-type: none; /* Remove the dots from the side of the links */
 }
 
-
-/***************************************************
-					  MIDDLE OF THE WEBSITE
-***************************************************/
+/* ============================================
+     			  MIDDLE OF THE WEBSITE
+============================================== */
 @media (prefers-color-scheme: light) {
 .container {
   display: flex;
@@ -68,9 +67,9 @@ li, a{
 }
 }
 
-/***************************************************
-					  TEXT ON THE LEFT SIDE
-***************************************************/
+/* ============================================
+     			  TEXT ON THE LEFT SIDE
+============================================== */
 .left {
   flex: 1;
   min-width: 280px;
@@ -104,9 +103,9 @@ li, a{
   box-shadow: 0 1px 4px #00acff;
 }
 
-/***************************************************
-					  IMAGE ON THE RIGHT SIDE
-***************************************************/
+/* ============================================
+     			IMAGE ON THE RIGHT SIDE
+============================================== */
 .right {
   flex: 1;
   min-width: 250px;
@@ -140,9 +139,9 @@ li, a{
 	}
 }
 
-/***************************************************
-					MAKES EVERYTHING RESPONSIVE
-***************************************************/
+/* ============================================
+     			MAKES EVERYTHING RESPONSIVE
+============================================== */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -169,4 +168,23 @@ li, a{
   }
 }
 
+/* ============================================
+     		DARK MODE VIA SWITCH
+============================================== */
+/* ---------- SWITCH DARK MODE ---------- */
+body.dark {
+  background-color: #121212 !important;
+}
 
+body.dark .container {
+  background-color: #121212 !important;
+}
+
+/* ---------- SWITCH LIGHT MODE ---------- */
+body.light {
+  background-color: #fff !important;
+}
+
+body.light .container {
+  background-color: #fff !important;
+}
