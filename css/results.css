@@ -5,9 +5,9 @@
 	box-sizing: border-box;
 }
 
-/***************************************************
-			TEXT AND LINKS ON THE WEBSITE
-***************************************************/
+/* ============================================
+     	 TEXT AND LINKS ON THE WEBSITE
+============================================== */
 /* Light Mode */
 @media (prefers-color-scheme: light) {
 li, a{
@@ -25,9 +25,9 @@ li, a{
 }
 }
 
-/***************************************************
-                    BODY 
-***************************************************/
+/* ============================================
+     			 	 BODY 
+============================================== */
 /* Light Mode */
 @media (prefers-color-scheme: light) {
 html, body {
@@ -35,10 +35,12 @@ html, body {
 	background-color: #fff;
 
 	/* Makes the middle of the site fixed, without the footer moving up when no search results are found or there are few results */
-	height: 100%;
+	/* height: 100%; */
 	margin: 0;
 	display: flex;
 	flex-direction: column;
+
+	min-height: 100vh;
 }
 }
 /* Dark Mode */
@@ -47,16 +49,18 @@ html, body {
 	width: 100%;
 	background-color: #09090b;
 
-	height: 100%;
+	/* height: 100%; */
 	margin: 0;
 	display: flex;
 	flex-direction: column;
+
+	min-height: 100vh;
 }
 }
 
-/***************************************************
-			MAIN (MIDDLE OF THE WEBSITE) 
-***************************************************/
+/* ============================================
+     		MAIN (MIDDLE OF THE WEBSITE) 
+============================================== */
 main {
 	flex: 1; /* Makes the main occupy all available vertical space */
 }
@@ -90,9 +94,9 @@ main {
 	margin: 0 auto;
 }
 
-/***************************************************
-			NAVBAR OF THE MENU WITH LINKS
-***************************************************/
+/* ============================================
+     	NAVBAR OF THE MENU WITH LINKS
+============================================== */
 /* Light Mode */
 @media (prefers-color-scheme: light) {
 .bottom-header {
@@ -130,9 +134,9 @@ main {
 	color: #00acff; /* Makes it show a color when you hover over the link */
 }
 
-/***************************************************
-			MAKES NAVBAR RESPONSIVE
-****************************************************/
+/* ============================================
+     		MAKES NAVBAR RESPONSIVE
+============================================== */
 @media (min-width: 960px) { /* Makes everything apply to devices with a minimum screen width of 960px */
 	.hide-on-desktop { /* Hide from desktops */
 		display: none;
@@ -247,9 +251,9 @@ has position: static, so ‘absolute’ is positioned relative to <body> and the
 	}
 }
 
-/***************************************************
-				SEARCH BAR 
-***************************************************/
+/* ============================================
+     			SEARCH BAR 
+============================================== */
 /* Entire search bar, including button */
 /* Light Mode */
 @media (prefers-color-scheme: light) {
@@ -361,9 +365,9 @@ form button:hover {
 	font-size: 18px;
 }
 
-/***************************************************
-				SEARCH TABLE
-****************************************************/
+/* ============================================
+     			SEARCH TABLE
+============================================== */
 .search {
 	display: flex;
 }
@@ -387,9 +391,9 @@ h3 {
 }
 
 
-/***************************************************
-				RESULTS TABLE
-***************************************************/
+/* ============================================
+     			RESULTS TABLE
+============================================== */
 .mainResultsSection 
 {
 	max-width: 800px;
@@ -533,9 +537,9 @@ h3 {
 }
 }
 
-/***************************************************
-     				FOOTER 
-***************************************************/
+/* ============================================
+     				FOOTER
+============================================== */
 /* Light Mode */
 @media (prefers-color-scheme: light) {
 .footer {
@@ -624,4 +628,403 @@ h3 {
 	text-decoration: none;
 	opacity: 0.5;
 }
+}
+
+/* ============================================
+     			SETTINGS BUTTON
+============================================== */
+/* Settings button */
+#btn-config {
+	background-color: transparent;
+	border: 1px solid #00acff;
+	color: #00acff;
+	padding: 6px 14px;
+	border-radius: 999px;
+	cursor: pointer;
+	font-size: 13px;
+	transition: 0.2s;
+}
+
+@media (prefers-color-scheme: light) {
+	#btn-config {
+		color: #00acff;
+		border-color: #00acff;
+	}
+	#btn-config:hover {
+		background: #00accf;
+		color: #fff;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	#btn-config {
+		color: #00acff;
+		border-color: #00acff;
+	}
+	#btn-config:hover {
+		background: #00accf;
+		color: #000;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+.config-popup {
+  color: #000; /* Popup texts color */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+.config-popup {
+  color: #fff; /* Popup texts color */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
+  background: #302f2f !important; /* Options background */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+}
+
+/* Popup settings header */
+@media (prefers-color-scheme: light) {
+.config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+
+  background-color: #fafafa; /* Settings text background */
+  border-top-left-radius: 12px; /* Left border */
+  border-top-right-radius: 12px; /* Right border */
+  overflow: hidden;
+}
+}
+@media (prefers-color-scheme: dark) {
+.config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+
+  background-color: #121212; /* Settings text background */
+  border-top-left-radius: 12px; /* Left border */
+  border-top-right-radius: 12px; /* Right border */
+  overflow: hidden;
+}
+}
+
+/* Close (X) button */
+.config-header button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Options box */
+.config-body {
+  padding: 12px;
+}
+@media (prefers-color-scheme: light) {
+#close-config {
+	color: #000; /* Close button (X) color */
+}
+}
+@media (prefers-color-scheme: dark) {
+#close-config {
+	color: #fff; /* Close button (X) color */
+}
+}
+
+/* Font options box */
+@media (prefers-color-scheme: light) {
+.config-body select {
+  width: 140px;
+  padding: 6px 10px;
+
+  border-radius: 0;
+  border: 1px solid #999;
+
+  background: transparent;
+  color: inherit;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+}
+@media (prefers-color-scheme: dark) {
+.config-body select {
+  width: 140px;
+  padding: 6px 10px;
+
+  border-radius: 0;
+  border: 1px solid #999;
+
+  background-color: #121212;
+  color: inherit;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+}
+
+.config-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Popup overlay */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.4);
+	display: none;
+	z-index: 9998;
+}
+
+/* Switch */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 46px;
+	height: 24px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background: #ccc;
+	transition: 0.3s;
+	border-radius: 20px;
+}
+
+.slider::before {
+	content: "";
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	top: 3px;
+	background: white;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+	background: #00acff;
+}
+
+.switch input:checked + .slider::before {
+	transform: translateX(22px);
+}
+
+/* ============================================
+     		DARK MODE VIA SWITCH
+============================================== */
+/* 
+trilho = switch
+slider = indicador
+*/
+/* ---------- SWITCH DARK MODE ---------- */
+body.dark {
+  background-color: #09090b !important;
+  color: #fff !important;
+  min-height: 100vh;
+}
+
+body.dark li,
+body.dark a {
+  color: #fff !important;
+}
+
+body.dark .top-header {
+  background-color: #09090b !important;
+}
+
+/* Navbar */
+body.dark .bottom-header {
+  background-color: #1d1d1e !important;
+}
+body.dark .nav-links li a:hover {
+	color: #00acff !important; /* Makes it show a color when you hover over the link */
+}
+body.dark .nav-links li a {
+		color: #fff !important;
+	}
+body.dark .btn-line {
+		background-color: #00acff !important; /* Color of the three lines of the hamburger mode icon */
+	}
+
+/* Form */
+body.dark form {
+  background: #1d1d1e !important;
+}
+
+body.dark form input {
+  color: #fff !important;
+}
+
+/* Results */
+body.dark .results-found {
+	color: #fff !important;
+}
+
+body.dark .serp-result-item {
+  background-color: #302f2f !important;
+  color: #fff !important;
+}
+body.dark .serp-result-item .url {
+  color: #18a006 !important;
+}
+body.dark .serp-result-item h3 a {
+  color: #007bff !important;
+}
+
+/* Settings Popup */
+body.dark .config-popup {
+  background: #302f2f !important; /* Options background */
+  box-shadow: 0 10px 30px rgba(0,0,0,.2) !important;
+  color: #fff; /* Settings popup texts colors */
+}
+
+body.dark .config-header {
+  border-bottom: 1px solid #ddd !important;
+  background-color: #121212 !important; /* Settings text background */
+  color: #fff; /* "Settings" etxt color */ 
+}
+body.dark #close-config {
+	color: #fff; /* Close button (X) color */
+}
+
+body.dark .config-body select {
+	background-color: #121212;
+}
+/* Footer */
+body.dark .footer {
+  background: #121212 !important;
+}
+body.dark .menu-icon {
+	color: white !important;
+}
+body.dark .footer-text {
+	color: white !important;
+}
+body.dark .menu-icon:hover {
+ color: #00acff !important; /* Color when hovering over links */
+}
+
+
+/* ---------- SWITCH LIGHT MODE ---------- */
+body.light {
+  background-color: #fff !important;
+  color: #000 !important;
+  min-height: 100vh;
+}
+
+body.light li,
+body.light a {
+  color: #000 !important;
+}
+
+/* Navbar */
+body.light .top-header {
+  background-color: #fafafa !important;
+}
+body.light .nav-links li a:hover {
+	color: #00acff !important; /* Makes it show a color when you hover over the link */
+}
+body.light .nav-links {
+		background-color: #fafafa !important; /* Bar color */
+		box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px !important;
+	 }
+body.light .nav-links li a {
+		color: #000 !important; /* Links color */
+	}
+body.light .btn-line {
+		background-color: #00acff !important; /* Color of the three lines of the hamburger mode icon */
+	}
+/* Bottom Header */
+body.light .bottom-header {
+  background-color: #fafafa !important;
+}
+
+/* Form */
+body.light form {
+  background: #ffffff !important;
+}
+
+body.light form input {
+  color: #000 !important;
+}
+
+/* Results */
+body.light .results-found {
+	color: #000 !important;
+}
+body.light .serp-result-item {
+  background-color: #fff !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15) !important;
+  transition: background-color 0.3s !important;
+}
+/* Website links */
+body.light .serp-result-item .url {
+  color: #0e6802 !important;
+}
+
+body.light .serp-result-item h3 a {
+  color: #007bff !important;
+}
+
+/* Footer */
+body.light .footer {
+  background: #fff !important;
+}
+body.light .menu-icon {
+	color: black  !important; /* Links color */
+}
+body.light .footer-text {
+	color: rgb(2, 2, 2) !important; /* Link color */
+}
+body.light .menu-icon:hover {
+ color: #00acff !important; /* Color when hovering over links */
 }

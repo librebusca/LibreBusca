@@ -5,9 +5,9 @@
 	box-sizing: border-box;
 }
 
-/***************************************************
-                    BODY 
-***************************************************/
+/* ============================================
+     				BODY 
+============================================== */
 @media (prefers-color-scheme: light) {
 html, body {
 	width: 100%;
@@ -33,9 +33,9 @@ html, body {
 }
 
 
-/***************************************************
-                    NAVBAR 
-***************************************************/
+/* ============================================
+     				NAVBAR 
+============================================== */
 /* Links amd texts */
 li, a{
 	font-size: 13px; /* Font size of links */
@@ -44,9 +44,9 @@ li, a{
 	list-style-type: none; /* Remove the dots from the side of the links */
 }
 
-/***************************************************
-                     HEADER 
-***************************************************/
+/* ============================================
+     				HEADER 
+============================================== */
 @media (prefers-color-scheme: light) {
 	header {
 	display: flex;
@@ -92,9 +92,9 @@ nav {
 	color: #00acff; /* Makes it show a color when you hover over the link */
 }
 
-/***************************************************
-            	MIDDLE OF THE WEBSITE
-***************************************************/
+/* ============================================
+     		MIDDLE OF THE WEBSITE
+============================================== */
 main {
 	flex: 1; /* Makes the main occupy all available vertical space */
 }
@@ -127,9 +127,9 @@ main {
 }
 }
 
-/*************************************************** 
-               WEBSITE TITLE
-***************************************************/
+/* ============================================
+     			WEBSITE TITLE
+============================================== */
 @media (prefers-color-scheme: light) {
 	h1 {
 	font-family: century gothic;
@@ -138,7 +138,7 @@ main {
 	font-size: 60px;
 	margin-bottom: 30px;
 }
-.titulo {
+.title {
 	color:#00acff; /* Secondary title color */
 }
 }
@@ -150,14 +150,14 @@ h1 {
 	font-size: 60px;
 	margin-bottom: 30px;
 }
-.titulo {
+.title {
 	color:#00acff;
 }
 }
 
-/***************************************************
-              		SEARCH BAR
-***************************************************/
+/* ============================================
+     			  SEARCH BAR
+============================================== */
 /* Search bar */
 @media (prefers-color-scheme: light) {
 	form {
@@ -213,9 +213,9 @@ form input{
 
 /* Search button settings */
 @media (prefers-color-scheme: light) {
-	form button{
+	form button {
 	border: 0;
-	/* border-radius: 50%; */
+	/* border-radius: 50%; It gives the button a different look, but it's good too. */
 	width: 60px;
 	/* height: 55px; */
 	background: #00acff;
@@ -274,9 +274,9 @@ form button:hover {
 }
 }
 
-/***************************************************
-     		SEARCH TABLE (RESULTS PAGE)
-***************************************************/
+/* ============================================
+     		SEARCH TABLE (RESULTS PAGE) 
+============================================== */
 .items {
 	display: flex;
 	flex-direction: column;
@@ -305,9 +305,9 @@ h3 {
 }
 
 
-/***************************************************
-                    FOOTER 
-***************************************************/
+/* ============================================
+     				FOOTER 
+============================================== */
 @media (prefers-color-scheme: light) {
 	.footer {
 	position: relative;
@@ -397,4 +397,382 @@ h3 {
 	text-decoration: none;
 	opacity: 0.5;
 }
+}
+
+/* ============================================
+     			SETTINGS BUTTON
+============================================== */
+.settings-wrapper {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+	width: 90%;
+	max-width: 600px;
+}
+
+#btn-config {
+	background-color: transparent;
+	border: 1px solid #00acff;
+	color: #00acff;
+	padding: 6px 14px;
+	border-radius: 999px;
+	cursor: pointer;
+	font-size: 13px;
+	transition: 0.2s;
+}
+
+@media (prefers-color-scheme: light) {
+	#btn-config {
+		color: #00acff;
+		border-color: #00acff;
+	}
+	#btn-config:hover {
+		background: #00accf;
+		color: #fff;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	#btn-config {
+		color: #00acff;
+		border-color: #00acff;
+	}
+	#btn-config:hover {
+		background: #00accf;
+		color: #000;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+.config-popup {
+  color: #000; /* Popup texts color */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+.config-popup {
+  color: #fff; /* Popup texts color */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 300px;
+  background: #302f2f !important; /* Options background */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+}
+}
+
+/* Popup settings header */
+@media (prefers-color-scheme: light) {
+.config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+
+  background-color: #fafafa; /* Settings text background */
+  border-top-left-radius: 12px; /* Left border */
+  border-top-right-radius: 12px; /* Right border */
+  overflow: hidden;
+}
+}
+@media (prefers-color-scheme: dark) {
+.config-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+
+  background-color: #121212; /* Settings text background */
+  border-top-left-radius: 12px; /* Left border */
+  border-top-right-radius: 12px; /* Right border */
+  overflow: hidden;
+}
+}
+
+.config-header button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Options box */
+.config-body {
+  padding: 12px;
+}
+@media (prefers-color-scheme: light) {
+#close-config {
+	color: #000; /* Close button (X) color */
+}
+}
+@media (prefers-color-scheme: dark) {
+#close-config {
+	color: #fff; /* Close button (X) color */
+}
+}
+
+/* Font options box */
+@media (prefers-color-scheme: light) {
+.config-body select {
+  width: 140px;
+  padding: 6px 10px;
+
+  border-radius: 0;
+  border: 1px solid #999;
+
+  background: transparent;
+  color: inherit;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+}
+@media (prefers-color-scheme: dark) {
+.config-body select {
+  width: 140px;
+  padding: 6px 10px;
+
+  border-radius: 0;
+  border: 1px solid #999;
+
+  background-color: #121212;
+  color: inherit;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+}
+
+.config-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Popup overlay */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.4);
+	display: none;
+	z-index: 9998;
+}
+
+/* Switch */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 46px;
+	height: 24px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background: #ccc;
+	transition: 0.3s;
+	border-radius: 20px;
+}
+
+.slider::before {
+	content: "";
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	left: 3px;
+	top: 3px;
+	background: white;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+	background: #00acff;
+}
+
+.switch input:checked + .slider::before {
+	transform: translateX(22px);
+}
+
+/* ============================================
+     		DARK MODE VIA SWITCH
+============================================== */
+/* ---------- SWITCH DARK MODE ---------- */
+body.dark html, body.dark body {
+	background-color: #09090b !important;
+}
+
+body.dark header {
+	background-color: #121212 !important;
+	box-shadow: rgb(0 0 0 / 15%) 0px 13px 30px -12px !important; /* Shadow under the bar */
+	}
+
+body.dark .container {
+	background: #121212 !important;
+}
+
+body.dark h1 {
+	color: #fff !important;
+}
+body.dark .title {
+	color:#00acff !important;
+}
+
+body.dark form {
+	background: #1d1d1e !important;
+	box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.2) !important; /* Shadow under the bar */
+}
+
+body.dark form input {
+	color: #fff !important;
+}
+
+body.dark form button {
+	background: #00acff !important;
+}
+
+body.dark form button:hover {
+	background: #00aaffbe !important;
+}
+
+body.dark ::placeholder {
+	color: #5c5c5c !important;
+}
+
+body.dark .footer {
+	background: #121212 !important;
+}
+body.dark .footer-text {
+	color: white !important;
+}
+body.dark .menu-icon {
+	color: white !important;
+}
+body.dark .menu-icon:hover {
+ color: #00acff !important; /* Color when hovering over links */
+}
+
+/* Settings Popup */
+body.dark .config-popup {
+  background: #302f2f !important; /* Options background */
+  box-shadow: 0 10px 30px rgba(0,0,0,.2) !important;
+  color: #fff; /* Settings popup texts colors */
+}
+
+body.dark .config-header {
+  border-bottom: 1px solid #ddd !important;
+  background-color: #121212 !important; /* Settings text background */
+  color: #fff; /* "Settings" etxt color */ 
+}
+body.dark #close-config {
+	color: #fff; /* Close button (X) color */
+}
+
+body.dark .config-body select {
+	background-color: #121212;
+}
+/* Footer */
+body.dark .footer {
+  background: #121212 !important;
+}
+body.dark .menu-icon {
+	color: white !important;
+}
+body.dark .footer-text {
+	color: white !important;
+}
+body.dark .menu-icon:hover {
+ color: #00acff !important; /* Color when hovering over links */
+}
+/* ---------- SWITCH LIGHT MODE ---------- */
+body.light .html, body.light .body {
+	background-color: #09090b !important;
+}
+
+body.light .header {
+	background-color: #121212 !important;
+	box-shadow: rgb(0 0 0 / 15%) 0px 13px 30px -12px !important; /* Shadow under the bar */
+}
+
+body.light .container {
+	background: #ffffff !important; /* Website background color */
+}
+
+body.light 	h1 {
+	color: #000000 !important;
+}
+body.light .title {
+	color:#00acff !important; /* Secondary title color */
+}
+
+body.light form {
+	background: #ffffff !important; /* Background color of the bar where you type your search query */
+	box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.2) !important; /* Shadow under the bar */
+}
+
+body.light form input {
+	color: #000000 !important; /* Text color when typing in search */
+}
+
+body.light form button {
+	background: #00acff !important;
+}
+
+body.light form button:hover {
+	background: #00aaffbe !important; /* Color of the search button when hovering over it */
+}
+
+::placeholder {
+	color: #5c5c5c !important; /* Text color in the search bar before typing */
+}
+
+body.light .menu-icon {
+	color: rgb(2, 2, 2) !important; /* Links color */
+}
+  
+body.light .menu-icon:hover {
+ color: #00acff !important; /* Color when hovering over links */
+}
+
+body.light .footer-text {
+	color: rgb(2, 2, 2) !important; /* Links color */
 }
