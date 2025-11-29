@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Libre Busca</title>
+    <meta name="description" value="Libre search engine, open source, no data collection and no censorship.">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+
+    <link rel="stylesheet" type="text/css" href="css/faq.css">
+    <script src="../js/anontab.js"></script>
+    <script src="../js/navbarresponsive.js" async></script>
+    <script src="../js/settingsbutton.js" async></script>
+</head>
+
+<body>
+
+  
+    <!-- NAVBAR -->
+    <header>        
+    <!-- Menu with links-->
+        <section class="bottom-header">
+
+            <ul class="nav-links">
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="send-links.php">Send Links</a></li>
+                <li><a href="error.html">Error Page</a></li>
+            </ul>
+
+            <!-- Makes the navbar responsive -->
+          <div class="menu-hamb-button hide-on-desktop">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+        <!-- Makes the navbar responsive -->   
+        
+        </section>
+    <!-- End of menu with links -->
+    </header>
+    <!------------->
+
+    
+   <main>
+   <!-------- FAQ ---------->
+   <div class="container">
+    <h1>FAQ</h1>
+   
+    <ul class="faq">
+
+        <!-- Question -->
+        <li>
+            <input type="radio" name="acordeon" id="one"> <!-- You need to change the ID for each question -->
+            <label for="one"><span>1</span>Does Libre Busca use JavaScript?</label> <!-- Here, change the for loop to the new ID and the question number -->
+            <div class="resposta">
+                <p>We use a small piece of JavaScript code so that the tab changes its title when the user goes to another tab, to maintain their privacy and prevent anyone from seeing the actual name of the tab. Another small piece of JavaScript we use is to make the website's link navbar responsive with the hamburger menu.</p>
+            </div>
+        </li>
+        <!-- End of question -->
+
+        <!-- Question -->
+        <li>
+            <input type="radio" name="acordeon" id="two">
+            <label for="two"><span>2</span>Does Libre Busca collect cookies?</label>
+            <div class="resposta">
+                <p>Does not!</div>
+        </li>
+        <!-- End of question -->
+
+        <!-- Question -->
+        <li>
+            <input type="radio" name="acordeon" id="three">
+            <label for="three"><span>3</span>Links on Libre Busca</label>
+            <div class="resposta">
+                <p>We set the “rel” attribute, which defines the relationship between the page and the linked URL, to “noopener noreferrer” to prevent phishing known as “tabnabbing.” <br>Tabnabbing, or reverse tabnabbing, is a way to exploit the browser that uses its default behavior with <i>target="_blank"</i> to gain partial access to the page through the "window.object" API.</br></p>
+            </div>
+        </li>
+        <!-- End of question -->
+
+        <!-- Question -->
+        <li>
+            <input type="radio" name="acordeon" id="four">
+            <label for="four"><span>4</span>How was the website built?</label>
+            <div class="resposta">
+                <p>Libre Busca was built using HTML 5 and CSS 3. It was also built with PHP 7 and SQL for database functionality, and has a little JavaScript that changes the tab title to “New tab” when the user goes to another tab, so that no one knows what that tab is about, helping a little with user privacy, and to make the navbar with links responsive.</p>
+            </div>
+        </li>
+        <!-- End of question -->
+
+        <!-- Question -->
+        <li>
+            <input type="radio" name="acordeon" id="five">
+            <label for="five"><span>5</span>Dark Mode</label>
+            <div class="resposta">
+                <p>We used local storage to save the website mode preference, i.e., dark mode or light mode, so that users would not have to choose the mode every time they accessed the website. Learn more about "local storage" here: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage</a>. But we switched to “prefers-color-scheme,” so the site will automatically change themes depending on the user's browser/PC preference. But we may add Local Storage again so that users can choose the theme manually as well.</p>
+            </div>
+        </li>
+        <!-- End of question -->
+
+        <!-- Question -->
+        <li>
+            <input type="radio" name="acordeon" id="six">
+            <label for="six"><span>6</span>What data is collected?</label>
+            <div class="resposta">
+                <p>None! We don't give a damn about anyone's data, so you can rest assured here.</div>
+        </li>
+        <!-- End of question -->       
+
+        </ul>
+
+    </div>
+    <!----------------------->
+    </main>
+    
+<footer>
+
+    <!-- FOOTER -->
+    <span class="rodape">우리는 말이 아니야. 사람이야.</span>   
+    <!------------->
+      
+</footer>
+
+</body>
+</html>
